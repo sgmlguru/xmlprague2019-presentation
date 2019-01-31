@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="20.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="xmlprague2019.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="xmlprague2019.xpr">
+        <folder path="."/>
+        <file name="../../../Dropbox/XMLPrague/2019/sfs-merge/paper/sfs-merge.xml"/>
+    </projectTree>
+</project>

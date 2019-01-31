@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+	    <title>Merging The Swedish Code of Statutes (SFS)</title>
+
+	    <link rel="stylesheet" href="css/reveal.css" />
+	    <link rel="stylesheet" href="css/theme/white.css" />
+	    <link rel="stylesheet" href="css/ari.css" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css"/>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Merging The Swedish Code of Statutes (SFS)</h2>
+                    
+                    <h4>XML Prague 2019</h4>
+                    <p>Ari Nordström | ari.nordstrom@gmail.com</p>
+                    
+                    <img class="stretch" src="img/law-books.jpg"/>
+                    
+                </section>
+                
+                
+                
+                <!-- START of intro to companies merge and SFS merge project slides -->
+                
+                <section>
+                    
+                    <!-- KG buys NJ -->
+                    <section>
+                        
+                        <h3>Background</h3>
+                        
+                        <img src="img/office_space_at_karnov_group_DEFAULT_2_1.jpg"/>
+                        
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- What SFS is -->
+                    <section>
+                        
+                        <blockquote>
+                            <p>The Swedish Code of Statutes (Swedish: Svensk författningssamling; SFS) is the official law code of Sweden which contains the statutes and ordinances enacted and designated by the Government, including a publication of all new Swedish laws enacted by the Riksdag.</p>
+                        </blockquote>
+                        
+                        <p><a href="https://www.svenskforfattningssamling.se/english.html">https://www.svenskforfattningssamling.se/english.html</a></p>
+                        
+                        <aside class="notes">
+                            <p>~10,000 documents, about half of them in force</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- What KG and NJ do with SFS -->
+                    <section>
+                        
+                        <h3>The Swedish Code of Statutes (SFS)</h3>
+                        
+                        <img src="img/law-books.jpg"/>
+                        
+                        <p class="fragment">Annotated and published by both companies</p>
+                        
+                        <aside class="notes">
+                            <p>Annotated and published by both companies</p>
+                            <p>Online offerings</p>
+                            <p>NJ Printed law book</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- The basics of SFS -->
+                    <section>
+                        
+                        <h3>SFS 1962:700</h3>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h6>§ 1</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>§ 2</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>§ 3</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <aside class="notes">
+                            <p>The law is (well, should be) the same</p>
+                            <p>Both companies offer their additions</p>
+                            <p>Commentary, links, ...</p>
+                        </aside>
+                        
+                    </section>
+                    
+                    
+                    <!-- Common online platform -->
+                    <section>
+                        <h3>Common Online Platform</h3>
+                        
+                        <img src="img/pro-platform.png"/>
+                        
+                        <aside class="notes">
+                            <p>This is the current Karnov platform</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Printed book -->
+                    <section>
+                        <h3>Printed Law Book</h3>
+                        
+                        <img src="img/lagbok992.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>NJ's flagship product!</p>
+                        </aside>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of intro to companies merge and SFS merge project slides -->
+                
+                
+                
+                
+                <!-- START of list markup examples -->
+                
+                <section>
+                    
+                    <!-- I always want to update the schema to say -->
+                    <section>
+                        <p>...see, we actually want this</p>
+                        
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;!ELEMENT list  (para, item+)&gt; </code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>I always want that schema to read like this</p>
+                            <p>Note that the para is a part of the list!</p>
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <p>But what we get is frequently more like this</p>
+                        
+                        <pre class="stretch">
+                            <code class="xml">&lt;!ELEMENT list  (title?, (note | warning | graphic | 
+                table | group | titled-block)*,
+                (item | bridge | graphic | table | group | 
+                titled-block)+)>
+&lt;!ATTLIST list  type (bullet | number | alpha) #REQUIRED
+                wall-size (small | medium | large) #IMPLIED
+                weird-number (1 | 2 | 3) #IMPLIED
+                random-useless-attr CDATA #IMPLIED
+                usage (yes | maybe | no) #REQUIRED
+                qtulhu-index CDATA #IMPLIED
+                fake-news CDATA #REQUIRED
+                did-you-read-this-far CDATA #IMPLIED &gt;
+                    </code>
+                        </pre>
+                        
+                        <p class="fragment">they put them in because somebody somewhere did, for some reason</p>
+                        <p class="fragment">or because it looked pretty</p>
+                        
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of list markup examples -->
+                
+                
+                
+                
+                <!-- START of Looking Pretty -->
+                
+                <section>
+                    <section>
+                        <p>But sometimes it is simply about looking pretty...</p>
+                        
+                        <img src="img/tuco.jpg"/>
+                        
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Looking Pretty -->
+                
+                
+                
+                
+                <!-- START of Why Does This Happen? -->
+                
+                <section>
+                    
+                    <section>
+                        <p>Why is one list OK but the other is not?</p>
+                        
+                        <aside class="notes">
+                            <p>Let's have a look at that last one again</p>
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <p>A house style</p>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Why Does This Happen? -->
+                
+                
+                
+                
+                <!-- START of What Is A Style Guide? -->
+                
+                <section>
+                    
+                    <section>
+                        <p>In the olden days, a house style was described by a style guide</p>
+                        
+                        <img src="img/reporter%20newspaper%20city%20editor.jpg-500x400.jpg"/>
+                    </section>
+                    
+                    
+                    
+                </section>
+                
+                <!-- END of What Is A Style Guide? -->
+                
+                
+                
+                <!-- START of Another Cautionary Tale -->
+                
+                <section>
+                    <section>
+                        <p>OK, so my lists may not be perfect, but do I actually need all THAT?</p>
+                        
+                        <aside class="notes">
+                            <p>Do I actually need a style guide?</p>
+                            <p>Can't I just, you know, use the DTD and the Schematron and some common sense?</p>
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <p>OK, you've convinced me, how do I get one?</p>
+                    </section>
+                </section>
+                
+                <!-- END of Another Cautionary Tale -->
+                
+                
+                
+                
+                <!-- START of How Do I Get One? -->
+                
+                <section>
+                    <section>
+                        <p>Ideally...</p>
+                        
+                        <p class="fragment">Info analysis -> Style guide</p>
+                        <p class="fragment">Info analysis -> DTD</p>
+                        <!--<p class="fragment">(Rinse and repeat)</p>-->
+                        <p class="fragment">Start writing</p>
+                        
+                        <img class="stretch" src="img/heaven-300x300.jpg"/>
+                    </section>
+                    
+                    
+                    
+                </section>
+                
+                <!-- END of How Do I Get One? -->
+                
+                
+                
+                
+                <!-- START of Roles -->
+                
+                <section>
+                    <section>
+                        <p>The Schematron should check rules defined in a style guide, not define it.</p>
+                        <p class="fragment">A Schematron checks content after the fact; the style guide allows content to be created that <em>avoids</em> the errors to begin with.</p>
+                        
+                        <aside class="notes">
+                            <p>There's a lot you can do to convert your numerous Schematron warnings into summaries, say, by eliminating duplicate errors, but in the end, an editor will be able to do that much more quickly while also being able to explain further if you don't understand the finer points.
+                                
+                                And perhaps more importantly, if the style guide changes, the editor can take this into account without any coding whatsoever, and also spot why the style guide needs to change.
+                                
+                                A Schematron, then, is a tool that aids rules expressed in style guides and enforced by an editor.</p>
+                        </aside>
+                    </section>
+                </section>
+                
+                <!-- END of Roles -->
+                
+                
+                
+                
+                <!-- START of Conclusions -->
+                
+                <section>
+                    
+                    <section>
+                        <blockquote>
+                            <p></p>
+                        </blockquote>
+                    </section>
+                    
+                    <section>
+                        <img class="stretch" src="img/annie-quote.png"/>
+                        <p>Thank you</p>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Conclusions -->
+                
+            </div>
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
