@@ -25,13 +25,13 @@
 	<body>
 		<div class="reveal">
             <div class="slides">
-                <section>
-                    <h2>Merging The Swedish Code of Statutes (SFS)</h2>
+                <section data-background="img/Sveriges_riksdag_fr_vasabron.JPG" data-background-size="100%">
+                    <h1 style="color: white;">Merging The Swedish Code of Statutes (SFS)</h1>
                     
-                    <h4>XML Prague 2019</h4>
-                    <p>Ari Nordström | ari.nordstrom@gmail.com</p>
+                    <h4 style="color: white;">XML Prague 2019</h4>
+                    <p style="color: white;">Ari Nordström | ari.nordstrom@gmail.com</p>
                     
-                    <img class="stretch" src="img/law-books.jpg"/>
+                    <!--<img class="stretch" src="img/law-books.jpg"/>-->
                     
                 </section>
                 
@@ -44,12 +44,29 @@
                     <!-- KG buys NJ -->
                     <section>
                         
-                        <h3>Background</h3>
+                        <h3>Karnov Group Buys Norstedts juridik</h3>
                         
                         <img src="img/office_space_at_karnov_group_DEFAULT_2_1.jpg"/>
                         
                         <aside class="notes">
-                            <p></p>
+                            <p>2017: KG buys NJ</p>
+                            <p>Merge companies (UGH)</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <section>
+                        <ul>
+                            <li class="fragment">systems</li>
+                            <li class="fragment">information</li>
+                        </ul>
+                        
+                        <!-- Insert suitable image -->
+                        <img class="stretch" src="img/orange-fish-blue-fish.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>Merge systems (double UGH)</p>
+                            <p>Merge information (well, that's what I want to talk about here)</p>
                         </aside>
                     </section>
                     
@@ -164,180 +181,345 @@
                 
                 
                 
+                <!-- START of what you need to understand first -->
                 
-                <!-- START of list markup examples -->
+                <section>
+                    <h3>What You Need to Understand First</h3>
+                    
+                    <!-- Image of PDF source -->
+                    <img class="stretch" src="img/sfs-1971-235-text.png"/>
+                    
+                    <aside class="notes">
+                        <p>PDF sources</p>
+                        <p>Guessed semantics</p>
+                        <p>MS Word and other sources?</p>
+                    </aside>
+                </section>
+                
+                <!-- END of what you need to understand first -->
+                
+                
+                
+                
+                <!-- START of approach -->
                 
                 <section>
                     
-                    <!-- I always want to update the schema to say -->
+                    <!-- Approach -->
                     <section>
-                        <p>...see, we actually want this</p>
+                        <h3>Approach</h3>
+                        
+                        <!-- Suitable image -->
+                        <img class="stretch" src="img/kg-nj-exc-kgp.png"/>
+                    </section>
+                    
+                    <!-- Source DTDs -->
+                    <section data-background="img/nj-dtd.png" data-background-size="100%">
+                        <h1>Norstedts DTD</h1>
+                    </section>
+                    
+                    <section data-background="img/kd-dtd.png" data-background-size="100%">
+                        <h1>Karnov DTD</h1>
+                    </section>
+                    
+                    <!-- Create exchange format -->
+                    <section data-background="img/exchange-dtd.png" data-background-size="100%">
+                        <h1>Exchange DTD</h1>
+                    </section>
+                    
+                    <!-- Create authoring format (KG++) -->
+                    <section data-background="img/kgpp-dtd.png" data-background-size="100%">
+                        <h1>KG++ DTD</h1>
+                    </section>
+                    
+                    <!-- Convert KG and NJ to EXC -->
+                    <section data-background="img/kg2exc-pipeline.png">
+                        
+                        <!-- Pipelines heading here? -->
+                        <h1>KG to EXC</h1>
+                        <h1>NJ to EXC</h1>
+                        
+                        <aside class="notes">
+                            <p>KG: 59 steps as I write this</p>
+                            <p>NJ: 58 steps</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Diff (Delta XML's XML Compare) -->
+                    <section data-background="img/xml-compare.png">
+                        <h1>Diffing</h1>
+                        <h2>Delta XML's XML Compare</h2>
+                    </section>
+                    
+                    <!-- Merge -->
+                    <section data-background="img/sfs-merge-pipeline.png">
+                        <h1>SFS Merge pipeline</h1>
+                        
+                        <aside class="notes">
+                            <p>54 steps</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Convert EXC to KG++ -->
+                    <section data-background="img/exc2kgp-pipeline.png">
+                        <h1>EXC to KG++</h1>
+                        
+                        <aside class="notes">
+                            <p>A mere 16 steps</p>
+                            <p>KG++ stricter subset of EXC</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- BUT: Legacy publishing at NJ -->
+                    <section data-background="img/law-books.jpg">
+                        <h1 style="color: white;">NJ Legacy publishing</h1>
+                        <h5 class="fragment" style="color: white;">The Printed Law Book</h5>
+                        
+                        <aside class="notes">
+                            <p>KG++ to EXC ~15 steps</p>
+                            <p>EXC to NJ ongoing</p>
+                            <p>XML to IDML to PDF process</p>
+                            <p>Buys us time</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- KG++ to EXC to old NJ -->
+                    
+                    
+                </section>
+                
+                <!-- END of approach -->
+                
+                
+                
+                
+                <!-- START of tools -->
+                
+                <section>
+                    
+                    <!-- Tools -->
+                    <section data-background="img/german-beer-pipeline.jpg">
+                        <h2 style="color: white">Tools</h2>
+                        
+                        <!-- Suitable image -->
+                    </section>
+                    
+                    <!-- I'm an XProc fan -->
+                    <section>
+                        <h5>I'm an XProc Fan</h5>
+                        
+                        <img src="img/bruges-beer-pipeline.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>XProc Workshop before conf</p>
+                            <p>Publishing, data conversions, ...</p>
+                            <p>DTD, Schematron validation</p>
+                            <p>Unit tests with XSpec</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Nic's XProc Tools -->
+                    <section>
+                        <h5>Nic Gibson's XProc Tools</h5>
+                        <!--<p><a href="https://github.com/Corbas/xproc-tools">https://github.com/Corbas/xproc-tools</a></p>-->
                         
                         <pre class="stretch">
-                            <code class="xml" data-trim data-noescape>&lt;!ELEMENT list  (para, item+)&gt; </code>
+                            <code class="xml" data-trim data-noescape>    &lt;xsl:template match="/">
+        &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+    &lt;/xsl:template>
+    
+    &lt;xsl:template match="exc:ref" mode="SFS-EXC2KG_INLINE">
+        &lt;kgp:ref>
+            &lt;xsl:copy-of select="@* except @type"/>
+            &lt;xsl:if test="@type">
+                &lt;xsl:attribute name="target-type" select="@type"/>
+            &lt;/xsl:if>
+            &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+        &lt;/kgp:ref>
+    &lt;/xsl:template>
+    
+    &lt;!-- ID transform -->
+    &lt;xsl:template match="node()" mode="SFS-EXC2KG_INLINE">
+        &lt;xsl:copy copy-namespaces="no">
+            &lt;xsl:copy-of select="@*"/>
+            &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+        &lt;/xsl:copy>
+    &lt;/xsl:template></code>
                         </pre>
                         
                         <aside class="notes">
-                            <p>I always want that schema to read like this</p>
-                            <p>Note that the para is a part of the list!</p>
+                            <p>XProc Workshop before conf</p>
+                            <p>Pipelined approach to XSLT transforms</p>
+                            <p>Each step does one thing (plus ID transform)</p>
                         </aside>
                     </section>
                     
+                    <!-- Manifest example -->
                     <section>
-                        <p>But what we get is frequently more like this</p>
+                        <h5>XSLT Pipeline Manifest</h5>
                         
                         <pre class="stretch">
-                            <code class="xml">&lt;!ELEMENT list  (title?, (note | warning | graphic | 
-                table | group | titled-block)*,
-                (item | bridge | graphic | table | group | 
-                titled-block)+)>
-&lt;!ATTLIST list  type (bullet | number | alpha) #REQUIRED
-                wall-size (small | medium | large) #IMPLIED
-                weird-number (1 | 2 | 3) #IMPLIED
-                random-useless-attr CDATA #IMPLIED
-                usage (yes | maybe | no) #REQUIRED
-                qtulhu-index CDATA #IMPLIED
-                fake-news CDATA #REQUIRED
-                did-you-read-this-far CDATA #IMPLIED &gt;
-                    </code>
+                            <code class="xml" data-trim data-noescape>&lt;manifest
+    xmlns="http://www.corbas.co.uk/ns/transforms/data"
+    xml:base="."
+    description="This converts Exchange XML to KG++ format">
+    
+    &lt;group description="Unmatched also need to be grouped">
+        &lt;item
+            href="../sfsmerge/SFS-EXC-MERGE_group.xsl"
+            description="Group unmatched; merged will not be touched"/>
+        &lt;item
+            href="../sfsmerge/SFS-EXC-MERGE_no-level-group.xsl"
+            description="Group group dividers without @level and their following siblings (non-recursive)"/>
+    &lt;/group>
+    
+    &lt;group
+        description="KG-specific steps"
+        xml:base=".">
+        &lt;!-- Converts main structures -->
+        &lt;item
+            href="SFS-EXC2KG_structure.xsl"
+            description="Converts main EXC structures"/>
+        
+        &lt;!-- Chapter versions to meta -->
+        &lt;item
+            href="SFS-EXC2KG_version2meta.xsl"
+            description="Converts EXC chapter version information to KG++ meta items"/>
+        
+        &lt;!-- Group title versions if there are two or more consecutive title groups -->
+        &lt;item
+            href="SFS-EXC2KG_merge-title-versions.xsl"
+            description="Merges the versions of two or more consecutive title groups"/>
+        
+        &lt;!-- Front matter -->
+        &lt;item
+            href="SFS-EXC2KG_front.xsl"
+            description="Converts front matter elements, except those that only need a namespace conversion"/>
+        
+        &lt;!-- In-force info -->
+        &lt;item
+            href="SFS-EXC2KG_in-force.xsl"
+            description="Converts in-force elements"/>
+        
+        &lt;!-- Various body- and chapter-level elements -->
+        &lt;item
+            href="SFS-EXC2KG_body.xsl"
+            description="Converts various body- and chapter-level elements"/>
+        
+        &lt;!-- Para- and subpara-level elements -->
+        &lt;item
+            href="SFS-EXC2KG_paras.xsl"
+            description="Converts para- and subpara-level elements"/>
+        
+        &lt;!-- Title elements -->
+        &lt;item
+            href="SFS-EXC2KG_title-grp.xsl"
+            description="Converts title elements"/>
+        
+        &lt;!-- Block-level -->
+        &lt;item
+            href="SFS-EXC2KG_block-level.xsl"
+            description="Converts block-level elements"/>
+        
+        &lt;!-- Annotations -->
+        &lt;item
+            href="SFS-EXC2KG_annotations.xsl"
+            description="Converts annotations (both redanm and kommentar)"/>
+        
+        &lt;!-- Inline elements -->
+        &lt;item
+            href="SFS-EXC2KG_inline.xsl"
+            description="Converts inline elements"/>
+        
+        &lt;!-- EXC namespace to KG++ namespace -->
+        &lt;item
+            href="SFS-EXC2KG_namespace-conversion.xsl"
+            description="Converts the EXC namespace to the KG++ namespace"/>
+        
+        &lt;!-- Convert various IDs to LOGIDs -->
+        &lt;item
+            href="SFS-EXC2KG_id-logid.xsl"
+            description="Converts IDs to LOGIDs"/>
+        
+        &lt;!-- Attrs -->
+        &lt;item
+            href="SFS-EXC2KG_attrs.xsl"
+            description="Converts various attributes"/>
+    &lt;/group>
+    
+&lt;/manifest></code>
                         </pre>
                         
-                        <p class="fragment">they put them in because somebody somewhere did, for some reason</p>
-                        <p class="fragment">or because it looked pretty</p>
-                        
                         <aside class="notes">
-                            <p></p>
+                            <p>1 item/1 XSLT</p>
+                            <p>All you have to do is to move them around</p>
                         </aside>
                     </section>
                     
-                </section>
-                
-                <!-- END of list markup examples -->
-                
-                
-                
-                
-                <!-- START of Looking Pretty -->
-                
-                <section>
+                    <!-- Debug example -->
                     <section>
-                        <p>But sometimes it is simply about looking pretty...</p>
+                        <h5>Debug</h5>
                         
-                        <img src="img/tuco.jpg"/>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>8.2M Jan 18 11:34 0-SFS1962-0700.xml
+8.2M Jan 18 11:34 1-SFS-EXC-MERGE_group.xsl.xml
+8.2M Jan 18 11:34 2-SFS-EXC-MERGE_no-level-group.xsl.xml
+8.2M Jan 22 09:17 3-SFS-EXC2KG_structure.xsl.xml
+8.3M Jan 22 09:17 4-SFS-EXC2KG_version2meta.xsl.xml
+8.2M Jan 22 09:17 5-SFS-EXC2KG_merge-title-versions.xsl.xml
+8.3M Jan 22 09:17 6-SFS-EXC2KG_front.xsl.xml
+8.2M Jan 22 09:17 7-SFS-EXC2KG_in-force.xsl.xml
+8.3M Jan 22 09:17 8-SFS-EXC2KG_body.xsl.xml
+8.3M Jan 22 09:17 9-SFS-EXC2KG_paras.xsl.xml
+8.6M Jan 22 09:17 10-SFS-EXC2KG_title-grp.xsl.xml
+8.8M Jan 22 09:17 11-SFS-EXC2KG_block-level.xsl.xml
+8.3M Jan 22 09:17 12-SFS-EXC2KG_annotations.xsl.xml
+9.8M Jan 22 09:17 13-SFS-EXC2KG_inline.xsl.xml
+8.1M Jan 22 09:17 14-SFS-EXC2KG_namespace-conversion.xsl.xml
+8.1M Jan 22 09:17 15-SFS-EXC2KG_id-logid.xsl.xml
+7.9M Jan 22 09:17 16-SFS-EXC2KG_attrs.xsl.xml</code>
+                        </pre>
                         
                     </section>
                     
-                </section>
-                
-                <!-- END of Looking Pretty -->
-                
-                
-                
-                
-                <!-- START of Why Does This Happen? -->
-                
-                <section>
+                    <!-- Delta XML -->
                     
-                    <section>
-                        <p>Why is one list OK but the other is not?</p>
-                        
-                        <aside class="notes">
-                            <p>Let's have a look at that last one again</p>
-                        </aside>
-                    </section>
-                    
-                    <section>
-                        <p>A house style</p>
-                    </section>
+                    <!-- Diff Example -->
                     
                 </section>
                 
-                <!-- END of Why Does This Happen? -->
+                <!-- END of tools -->
                 
                 
                 
                 
-                <!-- START of What Is A Style Guide? -->
+                <!-- BODY of the talk -->
                 
-                <section>
-                    
-                    <section>
-                        <p>In the olden days, a house style was described by a style guide</p>
-                        
-                        <img src="img/reporter%20newspaper%20city%20editor.jpg-500x400.jpg"/>
-                    </section>
-                    
-                    
-                    
-                </section>
+                <!-- How I produced EXC (and KG++) -->
+                <!-- Info analysis of SFS statutes -->
+                <!-- 4 "typical" source docs as PoC -->
+                <!-- Wrote EXC, reviewed by colleagues -->
+                <!-- Wrote NJ2EXC draft 1 -->
+                <!-- Wrote KG2EXC, draft 1 -->
+                <!-- Rinse and repeat -->
                 
-                <!-- END of What Is A Style Guide? -->
+                <!-- Uploaded to eXist-DB -->
+                <!-- Lots of queries and reports -->
+                <!-- Planned upconversions -->
                 
+                <!-- Issues, solutions -->
+                <!-- Upconversions: -->
+                <!-- Running headers -->
+                <!-- Grouping -->
+                <!-- List types -->
                 
+                <!-- Merge preferences -->
+                <!-- NJ annotations -->
+                <!-- KG notrefs -->
+                <!--  -->
+                <!-- Config -->
+                <!--  -->
                 
-                <!-- START of Another Cautionary Tale -->
-                
-                <section>
-                    <section>
-                        <p>OK, so my lists may not be perfect, but do I actually need all THAT?</p>
-                        
-                        <aside class="notes">
-                            <p>Do I actually need a style guide?</p>
-                            <p>Can't I just, you know, use the DTD and the Schematron and some common sense?</p>
-                        </aside>
-                    </section>
-                    
-                    <section>
-                        <p>OK, you've convinced me, how do I get one?</p>
-                    </section>
-                </section>
-                
-                <!-- END of Another Cautionary Tale -->
-                
-                
-                
-                
-                <!-- START of How Do I Get One? -->
-                
-                <section>
-                    <section>
-                        <p>Ideally...</p>
-                        
-                        <p class="fragment">Info analysis -> Style guide</p>
-                        <p class="fragment">Info analysis -> DTD</p>
-                        <!--<p class="fragment">(Rinse and repeat)</p>-->
-                        <p class="fragment">Start writing</p>
-                        
-                        <img class="stretch" src="img/heaven-300x300.jpg"/>
-                    </section>
-                    
-                    
-                    
-                </section>
-                
-                <!-- END of How Do I Get One? -->
-                
-                
-                
-                
-                <!-- START of Roles -->
-                
-                <section>
-                    <section>
-                        <p>The Schematron should check rules defined in a style guide, not define it.</p>
-                        <p class="fragment">A Schematron checks content after the fact; the style guide allows content to be created that <em>avoids</em> the errors to begin with.</p>
-                        
-                        <aside class="notes">
-                            <p>There's a lot you can do to convert your numerous Schematron warnings into summaries, say, by eliminating duplicate errors, but in the end, an editor will be able to do that much more quickly while also being able to explain further if you don't understand the finer points.
-                                
-                                And perhaps more importantly, if the style guide changes, the editor can take this into account without any coding whatsoever, and also spot why the style guide needs to change.
-                                
-                                A Schematron, then, is a tool that aids rules expressed in style guides and enforced by an editor.</p>
-                        </aside>
-                    </section>
-                </section>
-                
-                <!-- END of Roles -->
                 
                 
                 
@@ -346,15 +528,20 @@
                 
                 <section>
                     
-                    <section>
-                        <blockquote>
-                            <p></p>
-                        </blockquote>
+                    <section style="color: white" data-background="img/riksdagshuset.png">
+                        
+                        <h3 style="color: white">Conclusions</h3>
+                        
+                        <ul>
+                            <li>It's doable!</li>
+                            <li class="fragment">Manual selections necessary</li>
+                            <li class="fragment">Most problems cultural rather than technical</li>
+                        </ul>
                     </section>
                     
                     <section>
+                        <h5>Thank you</h5>
                         <img class="stretch" src="img/annie-quote.png"/>
-                        <p>Thank you</p>
                     </section>
                     
                 </section>
