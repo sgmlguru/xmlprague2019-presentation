@@ -55,14 +55,15 @@
                     </section>
                     
                     
-                    <section>
+                    <section style="color: white;" data-background="img/orange-fish-blue-fish.jpg">
+                        <h3 style="color: white;">Merging companies</h3>
                         <ul>
                             <li class="fragment">systems</li>
                             <li class="fragment">information</li>
                         </ul>
                         
                         <!-- Insert suitable image -->
-                        <img class="stretch" src="img/orange-fish-blue-fish.jpg"/>
+                        <!--<img class="stretch" src="img/orange-fish-blue-fish.jpg"/>-->
                         
                         <aside class="notes">
                             <p>Merge systems (double UGH)</p>
@@ -306,7 +307,7 @@
                     
                     <!-- I'm an XProc fan -->
                     <section>
-                        <h5>I'm an XProc Fan</h5>
+                        <h5>I'm a (Data) Pipelines Fan</h5>
                         
                         <img src="img/bruges-beer-pipeline.jpg"/>
                         
@@ -505,7 +506,32 @@
                 
                 <!-- Uploaded to eXist-DB -->
                 <!-- Lots of queries and reports -->
+                <section>
+                    <h3>(Lots of) eXist Queries</h3>
+                    
+                    <pre>
+                        <code class="xquery" data-trim data-noescape>xquery version "3.1";
+
+let $base := '/db/sfs/nj'
+let $moment := <docs>{
+    for $doc in collection($base)//sfs[.//sfskapitel//moment]
+        return $doc
+}</docs>
+
+return <docs count="{count($moment//sfs)}">{
+    $moment/node()
+}</docs></code>
+                    </pre>
+                    
+                    <aside class="notes">
+                        <p>Simple queries</p>
+                        <p>But a lot of them</p>
+                    </aside>
+                </section>
+                
+                
                 <!-- Planned upconversions -->
+                
                 
                 <!-- Issues, solutions -->
                 <!-- Upconversions: -->
