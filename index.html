@@ -486,6 +486,50 @@
                     <!-- Delta XML -->
                     
                     <!-- Diff Example -->
+                    <section>
+                        <h3>XML Compare</h3>
+                        <h4>DeltaXML</h4>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;exc:para deltaxml:deltaV2="A!=B">
+    &lt;deltaxml:attributes deltaxml:deltaV2="B">
+        &lt;dxa:kg-process
+            deltaxml:deltaV2="B">
+            &lt;deltaxml:attributeValue deltaxml:deltaV2="B"
+                >@logid="SFS2004-0046.K3.P3.S1" @num="1"
+                @chgbardate="20161101"&lt;/deltaxml:attributeValue>
+        &lt;/dxa:kg-process>
+        &lt;dxa:id
+            deltaxml:deltaV2="B">
+            &lt;deltaxml:attributeValue deltaxml:deltaV2="B"
+                >SFS2004-0046.K3.P3.S1&lt;/deltaxml:attributeValue>
+        &lt;/dxa:id>
+    &lt;/deltaxml:attributes>Fondbolaget
+    och förvaringsinstitutet ska ingå ett skriftligt avtal som reglerar förhållandet mellan
+    parterna. Avtalet ska bland annat reglera det informationsutbyte och den samordning som krävs
+    för att institutet ska kunna utföra sina uppgifter för fondens räkning i enlighet med kraven i
+    denna lag och andra författningar.
+    &lt;deltaxml:textGroup deltaxml:deltaV2="A">
+        &lt;deltaxml:text
+            deltaxml:deltaV2="A"> &lt;/deltaxml:text>
+    &lt;/deltaxml:textGroup>
+    &lt;exc:ref deltaxml:deltaV2="B"
+        source="kg" href="SFS2004-0046.N94" role="notreferens-KAR" number="94"/>
+    &lt;exc:change-sfs-grp deltaxml:deltaV2="A" source="nj" role="2016:892">
+        &lt;exc:change-sfs publish-type="online">
+            &lt;exc:para>Lag (2016:892).&lt;/exc:para>
+        &lt;/exc:change-sfs>
+        &lt;exc:change-sfs publish-type="print">
+            &lt;exc:para>&lt;exc:emph type="bold">Lag 2016:892&lt;/exc:emph> (se vid 4:15).&lt;/exc:para>
+        &lt;/exc:change-sfs>
+    &lt;/exc:change-sfs-grp>
+&lt;/exc:para></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                        
+                    </section>
                     
                 </section>
                 
@@ -494,15 +538,51 @@
                 
                 
                 
-                <!-- BODY of the talk -->
+                <!-- START of BODY of the talk -->
                 
                 <!-- How I produced EXC (and KG++) -->
                 <!-- Info analysis of SFS statutes -->
+                <section>
+                    <h3>(Limited) Information Analysis</h3>
+                    
+                    <!-- Screenshots of BrB, others -->
+                    
+                    <aside class="notes">
+                        <p>Look at the law book, web (less bias)</p>
+                        <p>4 sample documents for PoC</p>
+                    </aside>
+                </section>
+                
                 <!-- 4 "typical" source docs as PoC -->
+                
+                <!-- Look at NJ sources -->
                 <!-- Wrote EXC, reviewed by colleagues -->
+                <section>
+                    <h3>NJ Sources</h3>
+                    
+                    <!-- Looked at NJ sources first -->
+                    <!-- Wrote NJ2EXC conversion, first version -->
+                </section>
                 <!-- Wrote NJ2EXC draft 1 -->
+                
+                
                 <!-- Wrote KG2EXC, draft 1 -->
+                <section>
+                    <h3>KG sources</h3>
+                    
+                    <!-- Wrote equivalent KG2EXC conversion -->
+                    <!-- VERY different results! -->
+                </section>
+                
                 <!-- Rinse and repeat -->
+                <section>
+                    <h3>Rinse &amp; Repeat</h3>
+                    
+                    <!-- Tweak transforms to produce the same basic semantics in the output -->
+                </section>
+                
+                <!-- Expanding on the PoC -->
+                <!-- All 1960s SFS docs  -->
                 
                 <!-- Uploaded to eXist-DB -->
                 <!-- Lots of queries and reports -->
@@ -539,13 +619,37 @@ return <docs count="{count($moment//sfs)}">{
                 <!-- Grouping -->
                 <!-- List types -->
                 
+                
+                <!-- Diff the sources for the first time -->
+                <section>
+                    <h3>Properly Diffing for the First Time</h3>
+                    
+                    <img src="img/diffed-sfs.png" class="stretch"/>
+                    
+                    <aside class="notes">
+                        <p>Wrote XProc pipeline for diff</p>
+                        <p>Optionally outputs HTML reports</p>
+                    </aside>
+                </section>
+                
+                <!-- HTML report, quickly spot where the basic diffs are -->
+                <!-- SHOW diff example -->
+                
+                
+                <!-- This allowed me to start writing merge steps -->
+                
+                <!-- A few words about Delta XML keys -->
+                <!-- Normative vs non-normative (parts, chapters, paras, subparas...) -->
+                
+                <!-- Text refs vs xrefs -->
                 <!-- Merge preferences -->
                 <!-- NJ annotations -->
                 <!-- KG notrefs -->
                 <!--  -->
                 <!-- Config -->
-                <!--  -->
                 
+                
+                <!-- END of BODY of the talk -->
                 
                 
                 
