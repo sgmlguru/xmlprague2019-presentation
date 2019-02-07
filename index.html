@@ -540,56 +540,59 @@
                 
                 <!-- START of BODY of the talk -->
                 
-                <!-- How I produced EXC (and KG++) -->
-                <!-- Info analysis of SFS statutes -->
                 <section>
-                    <h3>(Limited) Information Analysis</h3>
                     
-                    <!-- Screenshots of BrB, others -->
+                    <!-- How I produced EXC (and KG++) -->
+                    <!-- Info analysis of SFS statutes -->
+                    <section>
+                        <h3>(Limited) Information Analysis</h3>
+                        
+                        <!-- Screenshots of BrB, others -->
+                        
+                        <aside class="notes">
+                            <p>Look at the law book, web (less bias)</p>
+                            <p>4 sample documents for PoC</p>
+                        </aside>
+                    </section>
                     
-                    <aside class="notes">
-                        <p>Look at the law book, web (less bias)</p>
-                        <p>4 sample documents for PoC</p>
-                    </aside>
-                </section>
-                
-                <!-- 4 "typical" source docs as PoC -->
-                
-                <!-- Look at NJ sources -->
-                <!-- Wrote EXC, reviewed by colleagues -->
-                <section>
-                    <h3>NJ Sources</h3>
+                    <!-- 4 "typical" source docs as PoC -->
                     
-                    <!-- Looked at NJ sources first -->
-                    <!-- Wrote NJ2EXC conversion, first version -->
-                </section>
-                <!-- Wrote NJ2EXC draft 1 -->
-                
-                
-                <!-- Wrote KG2EXC, draft 1 -->
-                <section>
-                    <h3>KG sources</h3>
+                    <!-- Look at NJ sources -->
+                    <!-- Wrote EXC, reviewed by colleagues -->
+                    <section>
+                        <h3>NJ Sources</h3>
+                        
+                        <!-- Looked at NJ sources first -->
+                        <!-- Wrote NJ2EXC conversion, first version -->
+                    </section>
+                    <!-- Wrote NJ2EXC draft 1 -->
                     
-                    <!-- Wrote equivalent KG2EXC conversion -->
-                    <!-- VERY different results! -->
-                </section>
-                
-                <!-- Rinse and repeat -->
-                <section>
-                    <h3>Rinse &amp; Repeat</h3>
                     
-                    <!-- Tweak transforms to produce the same basic semantics in the output -->
-                </section>
-                
-                <!-- Expanding on the PoC -->
-                <!-- All 1960s SFS docs  -->
-                
-                <!-- Uploaded to eXist-DB -->
-                <!-- Lots of queries and reports -->
-                <section>
-                    <h3>(Lots of) eXist Queries</h3>
+                    <!-- Wrote KG2EXC, draft 1 -->
+                    <section>
+                        <h3>KG sources</h3>
+                        
+                        <!-- Wrote equivalent KG2EXC conversion -->
+                        <!-- VERY different results! -->
+                    </section>
                     
-                    <pre>
+                    <!-- Rinse and repeat -->
+                    <section>
+                        <h3>Rinse &amp; Repeat</h3>
+                        
+                        <!-- Tweak transforms to produce the same basic semantics in the output -->
+                    </section>
+                    
+                    
+                    <!-- Expanding on the PoC -->
+                    <!-- All 1960s SFS docs  -->
+                    
+                    <!-- Uploaded to eXist-DB -->
+                    <!-- Lots of queries and reports -->
+                    <section>
+                        <h3>(Lots of) eXist Queries</h3>
+                        
+                        <pre>
                         <code class="xquery" data-trim data-noescape>xquery version "3.1";
 
 let $base := '/db/sfs/nj'
@@ -602,52 +605,194 @@ return <docs count="{count($moment//sfs)}">{
     $moment/node()
 }</docs></code>
                     </pre>
+                        
+                        <aside class="notes">
+                            <p>Simple queries</p>
+                            <p>But a lot of them</p>
+                        </aside>
+                    </section>
                     
-                    <aside class="notes">
-                        <p>Simple queries</p>
-                        <p>But a lot of them</p>
-                    </aside>
+                    
+                    <!-- Example of differences NJ/KG from paper -->
+                    <!-- KG -->
+                    <section style="font-size: 26pt">
+                        <pre class="stretch">
+                        <code class="xml" data-trim data-noescape>&lt;stycke chgbardate="20180701" logid="SFS1962-0700.K2.P2.S4" num="4">De inskränkningar 
+av svensk domsrätt som anges i andra och tredje styckena gäller inte för brott som avses i
+    &lt;list type="manuell">
+        &lt;listelement>1. &lt;referens logidref="SFS1962-0700.K4.P1A">4 kap. 1 a&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K4.P4C">4 c §§&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K16.P10A">16 kap. 10 a § första stycket 1&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K16.P10A.S5">femte stycket&lt;/referens> eller 
+                försök till sådana brott,&lt;/listelement>
+        &lt;listelement>2. &lt;referens logidref="SFS1962-0700.K4.P4.S2">4 kap. 4 § andra stycket&lt;/referens> varigenom 
+            någon förmåtts att ingå ett sådant äktenskap eller en sådan äktenskapsliknande förbindelse som avses i 
+            &lt;referens logidref="SFS1962-0700.K4.P4C">4 c §§&lt;/referens> eller försök till sådant
+            brott, eller&lt;/listelement>
+        &lt;listelement>3. &lt;referens logidref="SFS1962-0700.K6.P1">6 kap. 1–6&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P8">8&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P9">9&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K6.P12">12 §§&lt;/referens> eller försök till brott enligt 
+            &lt;referens logidref="SFS1962-0700.K6.P1">6 kap. 1&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P2">2&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P4">4–6&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P8">8&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P9">9&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K6.P12">12 §§&lt;/referens>, om brottet begåtts mot 
+            en person som inte fyllt arton år.&lt;/listelement>
+    &lt;/list>
+&lt;/stycke></code>
+                    </pre>
+                    </section>
+                    
+                    <!-- NJ -->
+                    <section style="font-size: 26pt">
+                        <pre class="stretch">
+                        <code class="xml" data-trim data-noescape>&lt;sty>De inskränkningar av svensk domsrätt som anges i andra och tredje
+    styckena gäller inte för brott som avses i&lt;/sty>
+&lt;lista typ="decimal">
+    &lt;lp>&lt;sty>4 kap. 1 a och 4 c §§ och 16 kap. 10 a § första stycket 1
+        och femte stycket eller försök till sådana brott,&lt;/sty>&lt;/lp>
+    &lt;lp>&lt;sty>4 kap. 4 § andra stycket varigenom någon förmåtts att ingå
+        ett sådant äktenskap eller en sådan äktenskapsliknande förbindelse
+        som avses i 4 c § eller försök till sådant brott, eller&lt;/sty>&lt;/lp>
+    &lt;lp>&lt;sty>6 kap. 1–6, 8, 9 och 12 §§ eller försök till brott enligt
+        6 kap. 1, 2, 4–6, 8, 9 och 12 §§, om brottet begåtts mot en person
+        som inte fyllt arton år. &lt;andringssfs>
+            &lt;andringssfsd>&lt;sty>Lag (2018:618).&lt;/sty>&lt;/andringssfsd>
+            &lt;andringssfstr>
+                &lt;sty>
+                    &lt;stil font-weight="bold">Lagar 2010:399&lt;/stil> (se vid 35:4), 
+                    &lt;stil font-weight="bold">2013:365, 2014:381&lt;/stil> (se vid 4:4 c), 
+                    &lt;stil font-weight="bold">2018:618,&lt;/stil> med ikraftträdande                
+                1 juli s.å.&lt;/sty>
+            &lt;/andringssfstr>
+        &lt;/andringssfs>
+    &lt;/sty>
+    &lt;/lp>
+&lt;/lista></code>
+                    </pre>
+                        
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Planned upconversions -->
+                    <!-- I'm only fixing stuff if I have to (both doing the same tag abuse is fine) -->
+                    
+                    
+                    <!-- Issues, solutions -->
+                    <!-- Upconversions: -->
+                    
+                    <!-- Running headers example -->
+                    <section>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape></code>
+                        </pre>
+                    </section>
+                    
+                    <!-- Group it to manipulate it as a proper nested structure -->
+                    <section>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape></code>
+                        </pre>
+                    </section>
+                    
+                    <!-- Flatten it (with group dividers) to diff it -->
+                    <section>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape></code>
+                        </pre>
+                    </section>
+                    
+                    <!-- ...and regroup in merge -->
+                    <section>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape></code>
+                        </pre>
+                    </section>
+                    
+                    
+                    <!-- List types -->
+                    <!-- Manual to ordered -->
+                    <!-- Fake to actual list -->
+                    
+                    
+                    <!-- Diff the sources for the first time -->
+                    <section>
+                        <h3>Properly Diffing for the First Time</h3>
+                        
+                        <img src="img/diffed-sfs.png" class="stretch"/>
+                        
+                        <aside class="notes">
+                            <p>Wrote XProc pipeline for diff</p>
+                            <p>Optionally outputs HTML reports</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- HTML report, quickly spot where the basic diffs are -->
+                    <!-- SHOW diff example -->
+                    
+                    
+                    <!-- This allowed me to start writing merge steps -->
+                    
+                    <!-- A few words about Delta XML keys -->
+                    <!-- Normative vs non-normative (parts, chapters, paras, subparas...) -->
+                    
+                    <!-- Text refs vs xrefs -->
+                    
+                    
+                    <!-- Interesting case: last list item vs first following list item -->
+                    <!-- This had to be fixed after the diff, in the merge pipeline - I only want to touch this sort of thing IF I have to -->
+                    <!-- SHOW the basic markup -->
+                    <section style="font-size: 32pt">
+                        <pre>
+                        <code class="xml" data-trim data-noescape>&lt;list type="decimal" deltaxml:deltaV2="A!=B">
+    &lt;item>
+        &lt;p>Item&lt;/p>
+    &lt;/item>
+    &lt;item>
+        &lt;p>Item&lt;/p>
+    &lt;/item>
+    &lt;item deltaxml:deltaV2="A!=B">
+        &lt;p>Actual list item content&lt;/p>
+        &lt;p deltaxml:deltaV2="A">An ordinary para&lt;/p>
+    &lt;/item>
+&lt;/list>
+&lt;p deltaxml:deltaV2="B">An ordinary para&lt;/p></code>
+                    </pre>
+                        
+                        <aside class="notes">
+                            <p>Walk through basic merge step</p>
+                            <p>This is a decimal list</p>
+                            <p>Manual vs decimal</p>
+                            <p>Two text paras diff...</p>
+                            <p>Differences inside those paras...</p>
+                        </aside>
+                        
+                    </section>
+                    
+                    
+                    
+                    <!-- Various merge preferences -->
+                    
+                    <!-- NJ annotations -->
+                    <!-- Mention KG-only or NJ-only docs/content -->
+                    <!-- We keep NJ annotations, generally speaking, but have to keep KG, too, if the content is KG only -->
+                    
+                    <!-- KG notrefs -->
+                    
+                    <!-- Lawbook content -->
+                    
+                    <!-- Config -->
+                    
+                    
+                    
+                    
+                    
                 </section>
-                
-                
-                <!-- Planned upconversions -->
-                
-                
-                <!-- Issues, solutions -->
-                <!-- Upconversions: -->
-                <!-- Running headers -->
-                <!-- Grouping -->
-                <!-- List types -->
-                
-                
-                <!-- Diff the sources for the first time -->
-                <section>
-                    <h3>Properly Diffing for the First Time</h3>
-                    
-                    <img src="img/diffed-sfs.png" class="stretch"/>
-                    
-                    <aside class="notes">
-                        <p>Wrote XProc pipeline for diff</p>
-                        <p>Optionally outputs HTML reports</p>
-                    </aside>
-                </section>
-                
-                <!-- HTML report, quickly spot where the basic diffs are -->
-                <!-- SHOW diff example -->
-                
-                
-                <!-- This allowed me to start writing merge steps -->
-                
-                <!-- A few words about Delta XML keys -->
-                <!-- Normative vs non-normative (parts, chapters, paras, subparas...) -->
-                
-                <!-- Text refs vs xrefs -->
-                <!-- Merge preferences -->
-                <!-- NJ annotations -->
-                <!-- KG notrefs -->
-                <!--  -->
-                <!-- Config -->
-                
                 
                 <!-- END of BODY of the talk -->
                 
