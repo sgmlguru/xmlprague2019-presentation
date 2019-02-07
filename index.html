@@ -215,30 +215,31 @@
                     </section>
                     
                     <!-- Source DTDs -->
-                    <section data-background="img/nj-dtd.png" data-background-size="100%">
+                    <!--<section data-background="img/nj-dtd.png" data-background-size="100%">
                         <h1>Norstedts DTD</h1>
                     </section>
                     
                     <section data-background="img/kd-dtd.png" data-background-size="100%">
                         <h1>Karnov DTD</h1>
-                    </section>
+                    </section>-->
                     
                     <!-- Create exchange format -->
-                    <section data-background="img/exchange-dtd.png" data-background-size="100%">
+                    <!--<section data-background="img/exchange-dtd.png" data-background-size="100%">
                         <h1>Exchange DTD</h1>
-                    </section>
+                    </section>-->
                     
                     <!-- Create authoring format (KG++) -->
-                    <section data-background="img/kgpp-dtd.png" data-background-size="100%">
+                    <!--<section data-background="img/kgpp-dtd.png" data-background-size="100%">
                         <h1>KG++ DTD</h1>
-                    </section>
+                    </section>-->
                     
                     <!-- Convert KG and NJ to EXC -->
                     <section data-background="img/kg2exc-pipeline.png">
                         
                         <!-- Pipelines heading here? -->
-                        <h1>KG to EXC</h1>
-                        <h1>NJ to EXC</h1>
+                        <h1>Pipelines</h1>
+                        <h2>KG to EXC</h2>
+                        <h2>NJ to EXC</h2>
                         
                         <aside class="notes">
                             <p>KG: 59 steps as I write this</p>
@@ -254,7 +255,7 @@
                     
                     <!-- Merge -->
                     <section data-background="img/sfs-merge-pipeline.png">
-                        <h1>SFS Merge pipeline</h1>
+                        <h1>SFS Merge Pipeline</h1>
                         
                         <aside class="notes">
                             <p>54 steps</p>
@@ -282,6 +283,13 @@
                             <p>XML to IDML to PDF process</p>
                             <p>Buys us time</p>
                         </aside>
+                    </section>
+                    
+                    <!-- Go back via EXC -->
+                    <section>
+                        <h3>Back to the Old NJ Format</h3>
+                        
+                        <img src="img/kgp-exc-nj.png"/>
                     </section>
                     
                     <!-- KG++ to EXC to old NJ -->
@@ -324,7 +332,7 @@
                         <h5>Nic Gibson's XProc Tools</h5>
                         <!--<p><a href="https://github.com/Corbas/xproc-tools">https://github.com/Corbas/xproc-tools</a></p>-->
                         
-                        <pre class="stretch">
+                        <pre class="stretch" style="font-size: 16pt">
                             <code class="xml" data-trim data-noescape>    &lt;xsl:template match="/">
         &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
     &lt;/xsl:template>
@@ -359,7 +367,7 @@
                     <section>
                         <h5>XSLT Pipeline Manifest</h5>
                         
-                        <pre class="stretch">
+                        <pre class="stretch" style="font-size: 16pt">
                             <code class="xml" data-trim data-noescape>&lt;manifest
     xmlns="http://www.corbas.co.uk/ns/transforms/data"
     xml:base="."
@@ -544,12 +552,11 @@
                     
                     <!-- How I produced EXC (and KG++) -->
                     <!-- Info analysis of SFS statutes -->
-                    <section>
-                        <h3>(Limited) Information Analysis</h3>
-                        
-                        <!-- Screenshots of BrB, others -->
+                    <section data-background="img/svearikeslag.jpg" data-background-size="80%">
+                        <h2 style="color: white">(Limited) Information Analysis</h2>
                         
                         <aside class="notes">
+                            <p>Never mind the sources</p>
                             <p>Look at the law book, web (less bias)</p>
                             <p>4 sample documents for PoC</p>
                         </aside>
@@ -559,33 +566,34 @@
                     
                     <!-- Look at NJ sources -->
                     <!-- Wrote EXC, reviewed by colleagues -->
-                    <section>
+                    <section data-background="img/nj-dtd.png" data-background-size="100%">
                         <h3>NJ Sources</h3>
                         
-                        <!-- Looked at NJ sources first -->
-                        <!-- Wrote NJ2EXC conversion, first version -->
+                        <aside class="notes">
+                            <p>Wrote NJ2EXC first</p>
+                        </aside>
                     </section>
                     <!-- Wrote NJ2EXC draft 1 -->
                     
                     
                     <!-- Wrote KG2EXC, draft 1 -->
-                    <section>
+                    <section data-background="img/kg-dtd.png" data-background-size="100%">
                         <h3>KG sources</h3>
                         
-                        <!-- Wrote equivalent KG2EXC conversion -->
-                        <!-- VERY different results! -->
-                    </section>
-                    
-                    <!-- Rinse and repeat -->
-                    <section>
-                        <h3>Rinse &amp; Repeat</h3>
-                        
-                        <!-- Tweak transforms to produce the same basic semantics in the output -->
+                        <aside class="notes">
+                            <p>Wrote equivalent KG2EXC</p>
+                            <p>VERY different results</p>
+                        </aside>
                     </section>
                     
                     
                     <!-- Expanding on the PoC -->
                     <!-- All 1960s SFS docs  -->
+                    <section>
+                        <h3>All 1960s Laws</h3>
+                        
+                        <img src="img/trafikomlaggningen.jpg"/>
+                    </section>
                     
                     <!-- Uploaded to eXist-DB -->
                     <!-- Lots of queries and reports -->
@@ -612,12 +620,20 @@ return <docs count="{count($moment//sfs)}">{
                         </aside>
                     </section>
                     
+                    <!-- Rinse and repeat -->
+                    <section data-background="img/exchange-dtd.png" data-background-size="100%">
+                        <h2>Rinse &amp; Repeat:</h2>
+                        <h3>The Exchange DTD Format</h3>
+                        
+                        <!-- Tweak transforms to produce the same basic semantics in the output -->
+                    </section>
+                    
                     
                     <!-- Example of differences NJ/KG from paper -->
                     <!-- KG -->
                     <section style="font-size: 26pt">
                         <pre class="stretch">
-                        <code class="xml" data-trim data-noescape>&lt;stycke chgbardate="20180701" logid="SFS1962-0700.K2.P2.S4" num="4">De inskränkningar 
+                            <code class="xml" data-trim data-noescape>&lt;stycke chgbardate="20180701" logid="SFS1962-0700.K2.P2.S4" num="4">De inskränkningar 
 av svensk domsrätt som anges i andra och tredje styckena gäller inte för brott som avses i
     &lt;list type="manuell">
         &lt;listelement>1. &lt;referens logidref="SFS1962-0700.K4.P1A">4 kap. 1 a&lt;/referens> och 
@@ -642,7 +658,12 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
             en person som inte fyllt arton år.&lt;/listelement>
     &lt;/list>
 &lt;/stycke></code>
-                    </pre>
+                            </pre>
+                        
+                        <aside class="notes">
+                            <p>Note the markup xrefs</p>
+                            <p>Note the manual list</p>
+                        </aside>
                     </section>
                     
                     <!-- NJ -->
@@ -674,7 +695,9 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                     </pre>
                         
                         <aside class="notes">
-                            <p></p>
+                            <p>Note the text-based xrefs</p>
+                            <p>Decimal list</p>
+                            <p>andringssfs content not in KG</p>
                         </aside>
                     </section>
                     
@@ -688,36 +711,182 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                     
                     <!-- Running headers example -->
                     <section>
+                        <h5>Running Headers with <code>@type</code></h5>
                         <pre class="stretch">
-                            <code class="xml" data-trim data-noescape></code>
+                            <code class="xml" data-trim data-noescape>&lt;header type="3">Running Header 1&lt;/header>
+&lt;para>Section content&lt;/para>
+
+&lt;header type="4">Running Header 2&lt;/header>
+&lt;para>Subsection content&lt;/para>
+
+&lt;header type="4">Running Header 3&lt;/header>
+&lt;para>More subsection content&lt;/para>
+
+&lt;header type="3">Running Header 4&lt;/header>
+&lt;para>New section content&lt;/para></code>
                         </pre>
+                        
+                        <aside class="notes">
+                            <p>Section structure implied</p>
+                            <p>This is how the human brain works</p>
+                        </aside>
                     </section>
+                    
+                    
+                    <!-- Mention the DTD model that allows the headers anywhere? -->
+                    <!--<section>
+                        <h5></h5>
+                    </section>-->
                     
                     <!-- Group it to manipulate it as a proper nested structure -->
                     <section>
+                        <h5>Group Recursively using @type</h5>
                         <pre class="stretch">
-                            <code class="xml" data-trim data-noescape></code>
+                            <code class="xml" data-trim data-noescape>&lt;group>
+    &lt;header level="3">...&lt;/header>
+    ...
+    &lt;group>
+        &lt;header level="4">&lt;/header>
+        ...
+    &lt;/group>
+    ...
+&lt;/group></code>
                         </pre>
+                        
+                        <aside class="notes">
+                            <p>Manipulate the group as if it was one</p>
+                        </aside>
                     </section>
                     
                     <!-- Flatten it (with group dividers) to diff it -->
                     <section>
+                        <h5>Flatten Contents for Diff</h5>
+                        
                         <pre class="stretch">
-                            <code class="xml" data-trim data-noescape></code>
+                            <code class="xml" data-trim data-noescape>&lt;group-divider level="3"/>
+&lt;header level="3">...&lt;/header>
+...
+&lt;group-divider level="4"/>
+&lt;header level="4">&lt;/header>
+...
+...</code>
                         </pre>
+                        
+                        <aside class="notes">
+                            <p>KG and NJ may have different running headers</p>
+                            <p>Running headers not always normative</p>
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <h5>Do the Diff</h5>
+                        
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;group-divider level="3"/>
+&lt;header level="3">...&lt;/header>
+...
+&lt;group-divider level="4" deltaxml:deltaV2="B"/>
+&lt;header level="4" deltaxml:deltaV2="B">EXTRA HEADER&lt;/header>
+...
+&lt;group-divider level="4"/>
+&lt;header level="4">&lt;/header>
+...
+...</code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Note B header</p>
+                            <p>Running headers not always normative</p>
+                        </aside>
                     </section>
                     
                     <!-- ...and regroup in merge -->
                     <section>
-                        <pre class="stretch">
+                        <h5>And Regroup Again, When Merging</h5>
+                        
+                        <img src="img/putin.gif" class="stretch"/>
+                        
+                        <!--<pre class="stretch">
                             <code class="xml" data-trim data-noescape></code>
-                        </pre>
+                        </pre>-->
+                        
+                        <aside class="notes">
+                            <p>And regroup</p>
+                        </aside>
                     </section>
                     
                     
                     <!-- List types -->
                     <!-- Manual to ordered -->
                     <!-- Fake to actual list -->
+                    <section>
+                        <h5>Upconvert Lists</h5>
+                        
+                        <p>Manual...</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="manual">
+    &lt;item>1. Apples&lt;/item>
+    &lt;item>2. Oranges&lt;/item>
+    &lt;item>3. Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                        <p>...to ordered</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="decimal">
+    &lt;item>Apples&lt;/item>
+    &lt;item>Oranges&lt;/item>
+    &lt;item>Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                    </section>
+                    
+                    <section>
+                        <h5>Upconvert Lists</h5>
+                        
+                        <p>Fake...</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;p>1. Apples&lt;/p>
+&lt;p>2. Oranges&lt;/p>
+&lt;p>3. Bananas&lt;/p><</code>
+                        </pre>
+                        <p>...to ordered</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="decimal">
+    &lt;item>Apples&lt;/item>
+    &lt;item>Oranges&lt;/item>
+    &lt;item>Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                    </section>
+                    
+                    
+                    <!-- But also mixed content with text and block-level -->
+                    <section>
+                        <h5>Mixed Content</h5>
+                        
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;p>Some text&lt;table frame="all">
+    &lt;title/>
+    &lt;tgroup cols="2">
+        ...
+    &lt;/tgroup>
+&lt;/table>Some more text&lt;list>
+    &lt;item>
+        &lt;para>Item&lt;/para>
+    &lt;/item>
+    &lt;item>
+        &lt;para>Item&lt;/para>
+    &lt;/item>
+&lt;/list>&lt;/p></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Only in KG sources</p>
+                            <p>Would have made diff a LOT harder</p>
+                            <p>Plus, I really wanted to get rid of the damned thing</p>
+                        </aside>
+                    </section>
+                    
                     
                     
                     <!-- Diff the sources for the first time -->
