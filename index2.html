@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+	    <title>Merging The Swedish Code of Statutes (SFS)</title>
+
+	    <link rel="stylesheet" href="css/reveal.css" />
+	    <link rel="stylesheet" href="css/theme/white.css" />
+	    <link rel="stylesheet" href="css/ari.css" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css"/>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+            <div class="slides">
+                <section data-background="img/Sveriges_riksdag_fr_vasabron.JPG" data-background-size="100%">
+                    <h1 style="color: white;">Merging The Swedish Code of Statutes (SFS)</h1>
+                    
+                    <h4 style="color: white;">XML Prague 2019</h4>
+                    <p style="color: white;">Ari Nordström | ari.nordstrom@gmail.com</p>
+                    
+                </section>
+                
+                
+                
+                <!-- START of intro to companies merge and SFS merge project slides -->
+                
+                <section>
+                    
+                    <!-- KG buys NJ -->
+                    <section>
+                        
+                        <h3>Karnov Group Buys Norstedts juridik</h3>
+                        
+                        <img src="img/office_space_at_karnov_group_DEFAULT_2_1.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>2017: KG buys NJ</p>
+                            <p>Merge companies (UGH)</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <section style="color: white;" data-background="img/orange-fish-blue-fish.jpg">
+                        <h3 style="color: white;">Merging companies</h3>
+                        <ul>
+                            <li class="fragment">systems</li>
+                            <li class="fragment">information</li>
+                        </ul>
+                        
+                        <!-- Insert suitable image -->
+                        <!--<img class="stretch" src="img/orange-fish-blue-fish.jpg"/>-->
+                        
+                        <aside class="notes">
+                            <p>Merge systems (double UGH)</p>
+                            <p>Merge information (well, that's what I want to talk about here)</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- What SFS is -->
+                    <section>
+                        
+                        <blockquote>
+                            <p>The Swedish Code of Statutes (Swedish: Svensk författningssamling; SFS) is the official law code of Sweden which contains the statutes and ordinances enacted and designated by the Government, including a publication of all new Swedish laws enacted by the Riksdag.</p>
+                        </blockquote>
+                        
+                        <p><a href="https://www.svenskforfattningssamling.se/english.html">https://www.svenskforfattningssamling.se/english.html</a></p>
+                        
+                        <aside class="notes">
+                            <p>~10,000 documents, about half of them in force</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- What KG and NJ do with SFS -->
+                    <section>
+                        
+                        <h3>The Swedish Code of Statutes (SFS)</h3>
+                        
+                        <img src="img/law-books.jpg"/>
+                        
+                        <p class="fragment">Annotated and published by both companies</p>
+                        
+                        <aside class="notes">
+                            <p>Annotated and published by both companies</p>
+                            <p>Online offerings</p>
+                            <p>NJ Printed law book</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- The basics of SFS -->
+                    <section>
+                        
+                        <h3>SFS 1962:700</h3>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h6>§ 1</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>§ 2</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>§ 3</h6>
+                                        <p>...</p>
+                                    </td>
+                                    <td>
+                                        <p class="fragment">KG Annotation</p>
+                                        <p class="fragment">NJ Annotation</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <aside class="notes">
+                            <p>The law is (well, should be) the same</p>
+                            <p>Both companies offer their additions</p>
+                            <p>Commentary, links, ...</p>
+                        </aside>
+                        
+                    </section>
+                    
+                    
+                    <!-- Common online platform -->
+                    <section>
+                        <h3>Common Online Platform</h3>
+                        
+                        <img src="img/pro-platform.png"/>
+                        
+                        <aside class="notes">
+                            <p>This is the current Karnov platform</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Printed book -->
+                    <section>
+                        <h3>Printed Law Book</h3>
+                        
+                        <img src="img/lagbok992.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>NJ's flagship product!</p>
+                        </aside>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of intro to companies merge and SFS merge project slides -->
+                
+                
+                
+                <!-- START of Approach -->
+                
+                <!-- * Approach
+    - Concept - EXC is the sum of all avil
+    - What you need to understand
+    - Info analysis first, not KG/NJ sources
+    - EXC DTD
+    - Look at NJ
+    - Create NJ2EXC
+    - Repeat with KG2EXC
+    - Rinse & repeat -->
+                
+                
+                <section>
+                    
+                    <!-- Approach -->
+                    <section>
+                        <h3>Approach</h3>
+                        
+                        <!-- Suitable image -->
+                        <img class="stretch" src="img/kg-nj-exc-kgp.png"/>
+                    </section>
+                    
+                    <section>
+                        <h3>What You Need to Understand First</h3>
+                        
+                        <!-- Image of PDF source -->
+                        <img class="stretch" src="img/sfs-1971-235-text.png"/>
+                        
+                        <aside class="notes">
+                            <p>PDF sources</p>
+                            <p>Guessed semantics</p>
+                            <p>MS Word and other sources?</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Info analysis of SFS statutes -->
+                    <section data-background="img/svearikeslag.jpg" data-background-size="80%">
+                        <h2 style="color: white">(Limited) Information Analysis</h2>
+                        
+                        <aside class="notes">
+                            <p>Never mind the sources</p>
+                            <p>Look at the law book, web (less bias)</p>
+                            <p>4 sample documents for PoC</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    
+                    <!-- Insert slide on EXC DTD first draft here -->
+                    
+                    
+                    <!-- Look at NJ sources -->
+                    <section data-background="img/nj-dtd.png" data-background-size="100%">
+                        <h3>NJ Sources</h3>
+                        
+                        <aside class="notes">
+                            <p>Wrote NJ2EXC first</p>
+                        </aside>
+                    </section>
+                    <!-- Wrote NJ2EXC draft 1 -->
+                    
+                    
+                    <!-- insert NJ2EXC slide? -->
+                    
+                    
+                    <!-- Wrote KG2EXC, draft 1 -->
+                    <section data-background="img/kg-dtd.png" data-background-size="100%">
+                        <h3>KG sources</h3>
+                        
+                        <aside class="notes">
+                            <p>Wrote equivalent KG2EXC</p>
+                            <p>VERY different results</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- insert KG2EXC slide? -->
+                    
+                    
+                    <!-- Expanding on the PoC -->
+                    <section>
+                        <h3>All 1960s Laws</h3>
+                        
+                        <img src="img/trafikomlaggningen.jpg"/>
+                    </section>
+                    
+                    <!-- Uploaded to eXist-DB -->
+                    <!-- Lots of queries and reports -->
+                    <section>
+                        <h3>(Lots of) eXist Queries</h3>
+                        
+                        <pre>
+                        <code class="xquery" data-trim data-noescape>xquery version "3.1";
+
+let $base := '/db/sfs/nj'
+let $moment := <docs>{
+    for $doc in collection($base)//sfs[.//sfskapitel//moment]
+        return $doc
+}</docs>
+
+return <docs count="{count($moment//sfs)}">{
+    $moment/node()
+}</docs></code>
+                    </pre>
+                        
+                        <aside class="notes">
+                            <p>Simple queries</p>
+                            <p>But a lot of them</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Rinse and repeat -->
+                    <section data-background="img/exchange-dtd.png" data-background-size="100%">
+                        <h2>Rinse &amp; Repeat:</h2>
+                        <h3>The Exchange DTD Format</h3>
+                        
+                        <!-- Tweak transforms to produce the same basic semantics in the output -->
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Approach -->
+                
+                
+                
+                <!-- START of Tools -->
+                
+                <!-- * Tools...
+    - Pipelines
+    - Nic's XProc Tools
+    - Why it helps -->
+                
+                <section>
+                    
+                    <section data-background="img/german-beer-pipeline.jpg">
+                        <h2 style="color: white">Tools</h2>
+                        
+                        <!-- Suitable image -->
+                    </section>
+                    
+                    <!-- I'm an XProc fan -->
+                    <section>
+                        <h5>I'm a (Data) Pipelines Fan</h5>
+                        
+                        <img src="img/bruges-beer-pipeline.jpg"/>
+                        
+                        <aside class="notes">
+                            <p>XProc Workshop before conf</p>
+                            <p>Publishing, data conversions, ...</p>
+                            <p>DTD, Schematron validation</p>
+                            <p>Unit tests with XSpec</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Nic's XProc Tools -->
+                    <section>
+                        <h5>Nic Gibson's XProc Tools</h5>
+                        <!--<p><a href="https://github.com/Corbas/xproc-tools">https://github.com/Corbas/xproc-tools</a></p>-->
+                        
+                        <pre class="stretch" style="font-size: 16pt">
+                            <code class="xml" data-trim data-noescape>    &lt;xsl:template match="/">
+        &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+    &lt;/xsl:template>
+    
+    &lt;xsl:template match="exc:ref" mode="SFS-EXC2KG_INLINE">
+        &lt;kgp:ref>
+            &lt;xsl:copy-of select="@* except @type"/>
+            &lt;xsl:if test="@type">
+                &lt;xsl:attribute name="target-type" select="@type"/>
+            &lt;/xsl:if>
+            &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+        &lt;/kgp:ref>
+    &lt;/xsl:template>
+    
+    &lt;!-- ID transform -->
+    &lt;xsl:template match="node()" mode="SFS-EXC2KG_INLINE">
+        &lt;xsl:copy copy-namespaces="no">
+            &lt;xsl:copy-of select="@*"/>
+            &lt;xsl:apply-templates select="node()" mode="SFS-EXC2KG_INLINE"/>
+        &lt;/xsl:copy>
+    &lt;/xsl:template></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>XProc Workshop before conf</p>
+                            <p>Pipelined approach to XSLT transforms</p>
+                            <p>Each step does one thing (plus ID transform)</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Manifest example -->
+                    <section>
+                        <h5>XSLT Pipeline Manifest</h5>
+                        
+                        <pre class="stretch" style="font-size: 16pt">
+                            <code class="xml" data-trim data-noescape>
+&lt;!-- Converts main structures -->
+&lt;item
+    href="SFS-EXC2KG_structure.xsl"
+    description="Converts main EXC structures"/>
+
+&lt;!-- Chapter versions to meta -->
+&lt;item
+    href="SFS-EXC2KG_version2meta.xsl"
+    description="Converts EXC chapter version information to KG++ meta items"/>
+
+&lt;!-- Group title versions if there are two or more consecutive title groups -->
+&lt;item
+    href="SFS-EXC2KG_merge-title-versions.xsl"
+    description="Merges the versions of two or more consecutive title groups"/>
+
+&lt;!-- Front matter -->
+&lt;item
+    href="SFS-EXC2KG_front.xsl"
+    description="Converts front matter elements, except those that only need a namespace conversion"/></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>1 item/1 XSLT</p>
+                            <p>All you have to do is to move them around</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Debug example -->
+                    <section>
+                        <h5>Why It Helps</h5>
+                        
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>8.2M Jan 18 11:34 0-SFS1962-0700.xml
+8.2M Jan 18 11:34 1-SFS-EXC-MERGE_group.xsl.xml
+8.2M Jan 18 11:34 2-SFS-EXC-MERGE_no-level-group.xsl.xml
+8.2M Jan 22 09:17 3-SFS-EXC2KG_structure.xsl.xml
+8.3M Jan 22 09:17 4-SFS-EXC2KG_version2meta.xsl.xml
+8.2M Jan 22 09:17 5-SFS-EXC2KG_merge-title-versions.xsl.xml
+8.3M Jan 22 09:17 6-SFS-EXC2KG_front.xsl.xml
+8.2M Jan 22 09:17 7-SFS-EXC2KG_in-force.xsl.xml
+8.3M Jan 22 09:17 8-SFS-EXC2KG_body.xsl.xml
+8.3M Jan 22 09:17 9-SFS-EXC2KG_paras.xsl.xml
+8.6M Jan 22 09:17 10-SFS-EXC2KG_title-grp.xsl.xml
+8.8M Jan 22 09:17 11-SFS-EXC2KG_block-level.xsl.xml
+8.3M Jan 22 09:17 12-SFS-EXC2KG_annotations.xsl.xml
+9.8M Jan 22 09:17 13-SFS-EXC2KG_inline.xsl.xml
+8.1M Jan 22 09:17 14-SFS-EXC2KG_namespace-conversion.xsl.xml
+8.1M Jan 22 09:17 15-SFS-EXC2KG_id-logid.xsl.xml
+7.9M Jan 22 09:17 16-SFS-EXC2KG_attrs.xsl.xml</code>
+                        </pre>
+                        
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Tools -->
+                
+                
+                
+                
+                <!-- START of Contexts -->
+                
+                <!-- * ...and their contexts
+    - KG/NJ examples
+    - Converted to EXC
+    - Diff
+    - Merge -->
+                
+                <section>
+                    
+                    <!-- Example of differences NJ/KG from paper -->
+                    <!-- KG -->
+                    <section style="font-size: 26pt">
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;stycke chgbardate="20180701" logid="SFS1962-0700.K2.P2.S4" num="4">De inskränkningar 
+av svensk domsrätt som anges i andra och tredje styckena gäller inte för brott som avses i
+    &lt;list type="manuell">
+        &lt;listelement>1. &lt;referens logidref="SFS1962-0700.K4.P1A">4 kap. 1 a&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K4.P4C">4 c §§&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K16.P10A">16 kap. 10 a § första stycket 1&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K16.P10A.S5">femte stycket&lt;/referens> eller 
+                försök till sådana brott,&lt;/listelement>
+        &lt;listelement>2. &lt;referens logidref="SFS1962-0700.K4.P4.S2">4 kap. 4 § andra stycket&lt;/referens> varigenom 
+            någon förmåtts att ingå ett sådant äktenskap eller en sådan äktenskapsliknande förbindelse som avses i 
+            &lt;referens logidref="SFS1962-0700.K4.P4C">4 c §§&lt;/referens> eller försök till sådant
+            brott, eller&lt;/listelement>
+        &lt;listelement>3. &lt;referens logidref="SFS1962-0700.K6.P1">6 kap. 1–6&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P8">8&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P9">9&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K6.P12">12 §§&lt;/referens> eller försök till brott enligt 
+            &lt;referens logidref="SFS1962-0700.K6.P1">6 kap. 1&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P2">2&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P4">4–6&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P8">8&lt;/referens>, 
+            &lt;referens logidref="SFS1962-0700.K6.P9">9&lt;/referens> och 
+            &lt;referens logidref="SFS1962-0700.K6.P12">12 §§&lt;/referens>, om brottet begåtts mot 
+            en person som inte fyllt arton år.&lt;/listelement>
+    &lt;/list>
+&lt;/stycke></code>
+                            </pre>
+                        
+                        <aside class="notes">
+                            <p>Note the markup xrefs</p>
+                            <p>Note the manual list</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- NJ -->
+                    <section style="font-size: 26pt">
+                        <pre class="stretch">
+                        <code class="xml" data-trim data-noescape>&lt;sty>De inskränkningar av svensk domsrätt som anges i andra och tredje
+    styckena gäller inte för brott som avses i&lt;/sty>
+&lt;lista typ="decimal">
+    &lt;lp>&lt;sty>4 kap. 1 a och 4 c §§ och 16 kap. 10 a § första stycket 1
+        och femte stycket eller försök till sådana brott,&lt;/sty>&lt;/lp>
+    &lt;lp>&lt;sty>4 kap. 4 § andra stycket varigenom någon förmåtts att ingå
+        ett sådant äktenskap eller en sådan äktenskapsliknande förbindelse
+        som avses i 4 c § eller försök till sådant brott, eller&lt;/sty>&lt;/lp>
+    &lt;lp>&lt;sty>6 kap. 1–6, 8, 9 och 12 §§ eller försök till brott enligt
+        6 kap. 1, 2, 4–6, 8, 9 och 12 §§, om brottet begåtts mot en person
+        som inte fyllt arton år. &lt;andringssfs>
+            &lt;andringssfsd>&lt;sty>Lag (2018:618).&lt;/sty>&lt;/andringssfsd>
+            &lt;andringssfstr>
+                &lt;sty>
+                    &lt;stil font-weight="bold">Lagar 2010:399&lt;/stil> (se vid 35:4), 
+                    &lt;stil font-weight="bold">2013:365, 2014:381&lt;/stil> (se vid 4:4 c), 
+                    &lt;stil font-weight="bold">2018:618,&lt;/stil> med ikraftträdande                
+                1 juli s.å.&lt;/sty>
+            &lt;/andringssfstr>
+        &lt;/andringssfs>
+    &lt;/sty>
+    &lt;/lp>
+&lt;/lista></code>
+                    </pre>
+                        
+                        <aside class="notes">
+                            <p>Note the text-based xrefs</p>
+                            <p>Decimal list</p>
+                            <p>andringssfs content not in KG</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Insert EXC version of the above -->
+                    
+                    
+                    <!-- Insert diff version of the above -->
+                    
+                    
+                    
+                </section>
+                
+                <!-- END of Contexts -->
+                
+                
+                
+                <!-- START of Upconversion Examples -->
+                
+                <!-- * Upconversion examples
+    - Manual to ordered list
+    - Fake to ordered list
+    - Mixed content at KG
+    - Running headers
+    - ...to groups
+    - NOTE: liberal source content models
+    - Back to flat
+    - Diff
+    - Group again -->
+                
+                <section>
+                    
+                    <!-- List types -->
+                    <!-- Manual to ordered -->
+                    <!-- Fake to actual list -->
+                    <section>
+                        <h5>Upconvert Lists</h5>
+                        
+                        <p>Manual...</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="manual">
+    &lt;item>1. Apples&lt;/item>
+    &lt;item>2. Oranges&lt;/item>
+    &lt;item>3. Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                        <p>...to ordered</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="decimal">
+    &lt;item>Apples&lt;/item>
+    &lt;item>Oranges&lt;/item>
+    &lt;item>Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                    </section>
+                    
+                    <section>
+                        <h5>Upconvert Lists</h5>
+                        
+                        <p>Fake...</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;p>1. Apples&lt;/p>
+&lt;p>2. Oranges&lt;/p>
+&lt;p>3. Bananas&lt;/p><</code>
+                        </pre>
+                        <p>...to ordered</p>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;list type="decimal">
+    &lt;item>Apples&lt;/item>
+    &lt;item>Oranges&lt;/item>
+    &lt;item>Bananas&lt;/item>
+&lt;/list></code>
+                        </pre>
+                    </section>
+                    
+                    
+                    <!-- But also mixed content with text and block-level -->
+                    <section>
+                        <h5>Mixed Content</h5>
+                        
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;p>Some text&lt;table frame="all">
+    &lt;title/>
+    &lt;tgroup cols="2">
+        ...
+    &lt;/tgroup>
+&lt;/table>Some more text&lt;list>
+    &lt;item>
+        &lt;para>Item&lt;/para>
+    &lt;/item>
+    &lt;item>
+        &lt;para>Item&lt;/para>
+    &lt;/item>
+&lt;/list>&lt;/p></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Only in KG sources</p>
+                            <p>Would have made diff a LOT harder</p>
+                            <p>Plus, I really wanted to get rid of the damned thing</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Running headers example -->
+                    <section>
+                        <h5>Running Headers with <code>@type</code></h5>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;header type="3">Running Header 1&lt;/header>
+&lt;para>Section content&lt;/para>
+
+&lt;header type="4">Running Header 2&lt;/header>
+&lt;para>Subsection content&lt;/para>
+
+&lt;header type="4">Running Header 3&lt;/header>
+&lt;para>More subsection content&lt;/para>
+
+&lt;header type="3">Running Header 4&lt;/header>
+&lt;para>New section content&lt;/para></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Section structure implied</p>
+                            <p>This is how the human brain works</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Mention the DTD model that allows the headers anywhere? -->
+                    <section>
+                        <h5></h5>
+                        <pre>
+                            <code class="xml" data-trim data-noescape>&lt;!ELEMENT body  (part | chapter | header | paragraph)* ><</code>
+                        </pre>
+                    </section>
+                    
+                    <!-- Group it to manipulate it as a proper nested structure -->
+                    <section>
+                        <h5>Group Recursively using @type</h5>
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;group>
+    &lt;header level="3">...&lt;/header>
+    ...
+    &lt;group>
+        &lt;header level="4">&lt;/header>
+        ...
+    &lt;/group>
+    ...
+&lt;/group></code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Manipulate the group as if it was one</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Flatten it (with group dividers) to diff it -->
+                    <section>
+                        <h5>Flatten Contents for Diff</h5>
+                        
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;group-divider level="3"/>
+&lt;header level="3">...&lt;/header>
+...
+&lt;group-divider level="4"/>
+&lt;header level="4">&lt;/header>
+...
+...</code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>KG and NJ may have different running headers</p>
+                            <p>Running headers not always normative</p>
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <h5>Do the Diff</h5>
+                        
+                        <pre class="stretch">
+                            <code class="xml" data-trim data-noescape>&lt;group-divider level="3"/>
+&lt;header level="3">...&lt;/header>
+...
+&lt;group-divider level="4" deltaxml:deltaV2="B"/>
+&lt;header level="4" deltaxml:deltaV2="B">EXTRA HEADER&lt;/header>
+...
+&lt;group-divider level="4"/>
+&lt;header level="4">&lt;/header>
+...
+...</code>
+                        </pre>
+                        
+                        <aside class="notes">
+                            <p>Note B header</p>
+                            <p>Running headers not always normative</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- ...and regroup in merge -->
+                    <section>
+                        <h5>And Regroup Again, When Merging</h5>
+                        
+                        <img src="img/putin.gif" class="stretch"/>
+                        
+                        <aside class="notes">
+                            <p>And regroup</p>
+                        </aside>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Upconversion Tools -->
+                
+                
+                
+                
+                <!-- START of Merge-related -->
+                
+                <!-- * Merge-related
+    - (explain why upconversion and merge reqs remain fluid)
+    - `@deltaxml:key` and normative content/IDs
+    - Last list item, first following para problem
+    - What you do about it
+    - Complications
+    - NJ-only annotations
+    - KG-only notref
+    - KG/NJ-only content and the validity attrs
+    - Supplement prefs
+    - `config.xml` -->
+                
+                <section>
+                    
+                    <!-- Insert slide explaining fluidity of upconversion/merge -->
+                    <!-- This might work: -->
+                    <!-- Diff the sources for the first time -->
+                    <section>
+                        <h3>Properly Diffing for the First Time</h3>
+                        
+                        <img src="img/diffed-sfs.png" class="stretch"/>
+                        
+                        <aside class="notes">
+                            <p>Wrote XProc pipeline for diff</p>
+                            <p>Optionally outputs HTML reports</p>
+                        </aside>
+                    </section>
+                    
+                    
+                    
+                    <!-- Insert slide with @deltaxml:key and normative content/IDs -->
+                    <section>
+                        <h5><code>@deltaxml:key</code></h5>
+                        
+                        <informaltable frame="void">
+                            <col width="50%"/>
+                            <col width="50%"/>
+                            <thead>
+                                <tr>
+                                    <th>KG</th>
+                                    <th>NJ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chapter 1</td>
+                                    <td>Chapter 1</td>
+                                </tr>
+                                <tr>
+                                    <td>§ 1 <emphasis>current</emphasis></td>
+                                    <td>§ 1 <emphasis>current</emphasis></td>
+                                </tr>
+                                <tr>
+                                    <td>§ 1 <emphasis>historical (19990913)</emphasis></td>
+                                    <td>§ 1 <emphasis>historical (19990913)</emphasis></td>
+                                </tr>
+                                <tr>
+                                    <td>§ 1 <emphasis>historical (19650101)</emphasis></td>
+                                    <td>§ 1 <emphasis>historical (19650101)</emphasis></td>
+                                </tr>
+                            </tbody>
+                        </informaltable>
+                    </section>
+                    
+                    
+                    <!-- Interesting case: last list item vs first following list item -->
+                    <!-- This had to be fixed after the diff, in the merge pipeline - I only want to touch this sort of thing IF I have to -->
+                    <!-- SHOW the basic markup -->
+                    <section style="font-size: 32pt">
+                        <pre>
+                        <code class="xml" data-trim data-noescape>&lt;list type="decimal" deltaxml:deltaV2="A!=B">
+    &lt;item>
+        &lt;p>Item&lt;/p>
+    &lt;/item>
+    &lt;item>
+        &lt;p>Item&lt;/p>
+    &lt;/item>
+    &lt;item deltaxml:deltaV2="A!=B">
+        &lt;p>Actual list item content&lt;/p>
+        &lt;p deltaxml:deltaV2="A">An ordinary para&lt;/p>
+    &lt;/item>
+&lt;/list>
+&lt;p deltaxml:deltaV2="B">An ordinary para&lt;/p></code>
+                    </pre>
+                        
+                        <aside class="notes">
+                            <p>Walk through basic merge step</p>
+                            <p>This is a decimal list</p>
+                            <p>Manual vs decimal</p>
+                            <p>Two text paras diff...</p>
+                            <p>Differences inside those paras...</p>
+                        </aside>
+                        
+                    </section>
+                    
+                    
+                    <!-- "Global decisions" -->
+                    <!-- Insert slide with KG-only notrefs -->
+                    <!-- Insert slide with NJ-only annotations -->
+                    <section>
+                        <h5>Global Decisions</h5>
+                        
+                        <ul>
+                            <li>Prefer NJ annotations</li>
+                            <li>Always include KG note xrefs</li>
+                        </ul>
+                        
+                        <aside class="notes">
+                            <p>But remember </p>
+                        </aside>
+                    </section>
+                    
+                    
+                    <!-- Insert slide with supplement prefs -->
+                    
+                    
+                    <!-- config.xml -->
+                    
+                    
+                </section>
+                
+                <!-- END of Merge-related -->
+                
+                
+                
+                
+                <!-- START of Odds and Ends -->
+                
+                <!-- * Odds and Ends
+    - KG++ is a stricter EXC
+    - EXC2KG++ much easier
+    - But we also go back - NJ Legacy publishing -->
+                
+                <section>
+                    
+                    <section data-background="img/kgpp-dtd.png" data-background-size="100%">
+                        <h1>KG++ DTD</h1>
+                    </section>
+                    
+                    <!-- Convert EXC to KG++ -->
+                    <section data-background="img/exc2kgp-pipeline.png">
+                        <h1>EXC to KG++</h1>
+                        
+                        <aside class="notes">
+                            <p>A mere 16 steps</p>
+                            <p>KG++ stricter subset of EXC</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- BUT: Legacy publishing at NJ -->
+                    <section data-background="img/law-books.jpg">
+                        <h1 style="color: white;">NJ Legacy publishing</h1>
+                        <h5 class="fragment" style="color: white;">The Printed Law Book</h5>
+                        
+                        <aside class="notes">
+                            <p>KG++ to EXC ~15 steps</p>
+                            <p>EXC to NJ ongoing</p>
+                            <p>XML to IDML to PDF process</p>
+                            <p>Buys us time</p>
+                        </aside>
+                    </section>
+                    
+                    <!-- Go back via EXC -->
+                    <section>
+                        <h3>Back to the Old NJ Format</h3>
+                        
+                        <img src="img/kgp-exc-nj.png"/>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Odds and Ends -->
+                
+                
+                
+                
+                <!-- START of Conclusions -->
+                
+                <section>
+                    
+                    <section style="color: white" data-background="img/riksdagshuset.png">
+                        
+                        <h3 style="color: white">Conclusions</h3>
+                        
+                        <ul>
+                            <li>It's doable!</li>
+                            <li class="fragment">Manual selections necessary</li>
+                            <li class="fragment">Most problems cultural rather than technical</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h5>Thank you</h5>
+                        <img class="stretch" src="img/annie-quote.png"/>
+                    </section>
+                    
+                </section>
+                
+                <!-- END of Conclusions -->
+                
+            </div>
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
