@@ -42,7 +42,7 @@
                     <!-- KG buys NJ -->
                     <section>
                         
-                        <h3>Karnov Group Buys Norstedts juridik</h3>
+                        <h3>Karnov Group (KG) Buys Norstedts juridik (NJ)</h3>
                         
                         <img src="img/office_space_at_karnov_group_DEFAULT_2_1.jpg"/>
                         
@@ -201,6 +201,13 @@
                         
                         <!-- Suitable image -->
                         <img class="stretch" src="img/kg-nj-exc-kgp.png"/>
+                        
+                        <aside class="notes">
+                            <p>The law should be the same, so...</p>
+                            <p>Convert both sources to common format</p>
+                            <p>Diff and merge</p>
+                            <p>Convert to new authoring format</p>
+                        </aside>
                     </section>
                     
                     <section>
@@ -219,6 +226,7 @@
                     <!-- Info analysis of SFS statutes -->
                     <section data-background="img/svearikeslag.jpg" data-background-size="80%">
                         <h2 style="color: white">(Limited) Information Analysis</h2>
+                        <h5>Four "representative" laws</h5>
                         
                         <aside class="notes">
                             <p>Never mind the sources</p>
@@ -243,9 +251,6 @@
                     <!-- Wrote NJ2EXC draft 1 -->
                     
                     
-                    <!-- insert NJ2EXC slide? -->
-                    
-                    
                     <!-- Wrote KG2EXC, draft 1 -->
                     <section data-background="img/kg-dtd.png" data-background-size="100%">
                         <h3>KG sources</h3>
@@ -258,11 +263,23 @@
                     
                     
                     <!-- insert KG2EXC slide? -->
+                    <section data-background="img/kg2exc-pipeline.png">
+                        
+                        <!-- Pipelines heading here? -->
+                        <h1>Pipelines</h1>
+                        <h2>KG to EXC</h2>
+                        <h2>NJ to EXC</h2>
+                        
+                        <aside class="notes">
+                            <p>KG: 59 steps as I write this</p>
+                            <p>NJ: 58 steps</p>
+                        </aside>
+                    </section>
                     
                     
                     <!-- Expanding on the PoC -->
                     <section>
-                        <h3>All 1960s Laws</h3>
+                        <h3>Added All 1960s Laws</h3>
                         
                         <img src="img/trafikomlaggningen.jpg"/>
                     </section>
@@ -270,7 +287,7 @@
                     <!-- Uploaded to eXist-DB -->
                     <!-- Lots of queries and reports -->
                     <section>
-                        <h3>(Lots of) eXist Queries</h3>
+                        <h3>Uploaded to eXist and Did (Lots of) eXist Queries</h3>
                         
                         <pre>
                         <code class="xquery" data-trim data-noescape>xquery version "3.1";
@@ -450,11 +467,14 @@ return <docs count="{count($moment//sfs)}">{
                     <!-- What are we talking about here? -->
                     <section>
                         <h3>A Bit of Context</h3>
+                        
+                        <!--<img src="img/BrB-markup-text.png" class="stretch"/>-->
                     </section>
                     
                     <!-- Example of differences NJ/KG from paper -->
                     <!-- KG -->
                     <section style="font-size: 26pt">
+                        <h5>The Karnov Version</h5>
                         <pre class="stretch">
                             <code class="xml" data-trim data-noescape>&lt;stycke chgbardate="20180701" logid="SFS1962-0700.K2.P2.S4" num="4">De inskränkningar 
 av svensk domsrätt som anges i andra och tredje styckena gäller inte för brott som avses i
@@ -491,6 +511,7 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                     
                     <!-- NJ -->
                     <section style="font-size: 26pt">
+                        <h5>The Norstedts Version</h5>
                         <pre class="stretch">
                         <code class="xml" data-trim data-noescape>&lt;sty>De inskränkningar av svensk domsrätt som anges i andra och tredje
     styckena gäller inte för brott som avses i&lt;/sty>
@@ -527,6 +548,8 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                     
                     <!-- Insert EXC version of the above -->
                     <section style="font-size: 26pt">
+                        <h5>The (Desired) Exchange Version</h5>
+                        
                         <pre class="stretch">
                             <code class="xml" data-trim data-noescape>&lt;exc:para kg-process="@logid=&amp;#34;SFS1962-0700.K2.P2.S4&amp;#34; @num=&amp;#34;4&amp;#34; @chgbardate=&amp;#34;20180701&amp;#34;"
            id="SFS1962-0700.K2.P2.S4">De inskränkningar av svensk domsrätt som anges i andra och tredje styckena gäller inte för brott som avses i&lt;/exc:para>
@@ -678,6 +701,10 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                 
                 <section>
                     
+                    <section>
+                        <h3>Upconversion</h3>
+                    </section>
+                    
                     <!-- List types -->
                     <!-- Manual to ordered -->
                     <!-- Fake to actual list -->
@@ -709,7 +736,7 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                         <pre>
                             <code class="xml" data-trim data-noescape>&lt;p>1. Apples&lt;/p>
 &lt;p>2. Oranges&lt;/p>
-&lt;p>3. Bananas&lt;/p><</code>
+&lt;p>3. Bananas&lt;/p></code>
                         </pre>
                         <p>...to ordered</p>
                         <pre>
@@ -881,7 +908,7 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                     <!-- This might work: -->
                     <!-- Diff the sources for the first time -->
                     <section>
-                        <h3>Properly Diffing for the First Time</h3>
+                        <h3>Diffing and Merging</h3>
                         
                         <img src="img/diffed-sfs.png" class="stretch"/>
                         
@@ -1127,7 +1154,7 @@ av svensk domsrätt som anges i andra och tredje styckena gäller inte för brot
                         <h3 style="color: white">Conclusions</h3>
                         
                         <ul>
-                            <li>It's doable!</li>
+                            <li class="fragment">It's doable!</li>
                             <li class="fragment">Manual selections necessary</li>
                             <li class="fragment">Most problems cultural/political rather than technical</li>
                         </ul>
